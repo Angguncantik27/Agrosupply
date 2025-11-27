@@ -218,7 +218,7 @@ def kelola_voucher():
             print(f"{'Index':<4} | {'Kode':<12} | {'Diskon':<6}")
             print("-" * 28)
             for idx in df.index:
-                kode = str(df.loc[idx, "Kode"])[:10]  # Batasi 10 karakter
+                kode = str(df.loc[idx, "Kode"])
                 diskon = int(float(df.loc[idx, "Diskon"]) * 100)
                 print(f"{idx+1:<4} | {kode:<12} | {diskon}%")
 
@@ -1318,6 +1318,7 @@ def status_penjualan(user):
 
 if __name__ == "__main__":
     menu_utama()
+
 
 
     
